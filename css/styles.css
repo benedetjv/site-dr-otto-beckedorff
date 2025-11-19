@@ -1,0 +1,570 @@
+/* ========= Fonte Safira March (títulos especiais, se quiser usar) ========= */
+/* Ajuste o nome/arquivo conforme o que estiver na pasta /fonts */
+@font-face {
+  font-family: "Safira March";
+  src: url("../fonts/SafiraMarch-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ========= Paleta de cores ========= */
+:root {
+  --azul-claro: #7d99b2;
+  --azul-medio: #39586d;
+  --azul-escuro: #2a4156;
+  --cinza-fundo: #f5f4f2;
+}
+
+/* ========= Reset simples ========= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f9fa;
+  color: var(--azul-escuro);
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--azul-medio);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--azul-claro);
+  text-decoration: underline;
+}
+
+section {
+  padding: 3.5rem 0;
+}
+
+.section-light {
+  background-color: #ffffff;
+}
+
+.section-soft {
+  background-color: var(--cinza-fundo);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* ========= Header / Navbar ========= */
+
+.site-header {
+  background-color: var(--azul-escuro);
+  color: #ffffff;
+  padding: 0.9rem 0;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-nav .nav-link {
+  color: #7d99b2 !important;
+  font-weight: 400;
+  font-size: 0.95rem;
+  margin-left: 1.25rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ========= Hero ========= */
+
+.hero-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: var(--azul-medio);
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.hero-photo {
+  max-width: 320px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-photo img {
+  width: 100%;
+  display: block;
+}
+
+.btn-primary-custom {
+  display: inline-block;
+  background-color: var(--azul-escuro);
+  border: none;
+  padding: 0.7rem 2.2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--azul-medio);
+  color: #ffffff;
+}
+
+/* ========= Agende (Doctoralia) ========= */
+
+.agende-wrapper {
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.agende-label {
+  text-align: center;
+  font-weight: 600;
+  color: var(--azul-medio);
+  margin-bottom: 1.25rem;
+}
+
+.doctoralia-card {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* ========= Serviços (Como posso te ajudar?) ========= */
+
+.servicos-grid {
+  background-color: var(--azul-claro);
+  padding: 3rem 1rem;
+}
+
+.servicos-grid-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+}
+
+.servico-card {
+  padding: 1.25rem 1rem;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.servico-titulo {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--azul-escuro);
+}
+
+.servico-descricao {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+@media (max-width: 991px) {
+  .servico-card {
+    border-right: none;
+  }
+}
+
+/* ========= Sobre ========= */
+
+.sobre-foto {
+  max-width: 380px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.sobre-foto img {
+  width: 100%;
+  display: block;
+}
+
+/* ========= Ícones + Listas ========= */
+
+.servico-icon {
+  font-size: 48px;
+  color: var(--azul-claro);
+  margin-bottom: 10px;
+}
+
+/* Ícone de doenças (opcional) */
+.icone-doencas {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* ### CORREÇÃO DA PROPORÇÃO DAS COLUNAS ### */
+
+.lista-coluna {
+  display: flex;
+  justify-content: center;
+}
+
+.lista-coluna ul {
+  width: 340px;          /* <-- LARGURA IGUAL EM TODAS AS COLUNAS */
+  max-width: 100%;
+  text-align: left;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lista-coluna ul li {
+  margin-bottom: 0.35rem;
+}
+
+.lista-coluna ul li::before {
+  content: "✔";
+  margin-right: 0.5rem;
+  color: var(--azul-medio);
+}
+
+/* ========= Contato ========= */
+
+.contato-endereco {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.contato-whats-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ===== BOTÃO WHATSAPP — VERSÃO AZUL (IDENTIDADE VISUAL) ===== */
+
+.btn-whatsapp {
+  background-color: var(--azul-escuro);
+  border: none;
+  padding: 0.75rem 2.3rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* espaço entre ícone e texto */
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-whatsapp i {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--azul-medio);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+/* ========= Localização ========= */
+
+.mapa-wrapper iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+}
+
+.btn-waze {
+  background-color: var(--azul-escuro);
+  border: none;
+  padding: 0.6rem 1.8rem;
+  font-weight: 600;
+}
+
+.btn-waze:hover {
+  background-color: var(--azul-medio);
+}
+
+.instagram-wrapper {
+  max-width: 350px;
+  width: 100%;
+}
+
+.rodape-crm {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ========= Footer ========= */
+
+.site-footer {
+  background-color: var(--azul-escuro);
+  color: #ffffff;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* ========= Responsivo ========= */
+
+@media (max-width: 991px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-photo {
+    margin: 2rem auto 0 auto;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+  }
+
+  /* Ajuste responsivo das listas */
+  .lista-coluna ul {
+    width: 100%;
+  }
+}
+
+
+/* ===========================
+   Ícones personalizados da seção "Como posso te ajudar?"
+   =========================== */
+
+/* estilo do SVG ícone (tamanho, cor, espaçamento) */
+.servico-icon-custom {
+  width: 48px;
+  height: 48px;
+  color: var(--azul-claro);   /* usa a variável da paleta */
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* wrapper interno do card para controlar alinhamento */
+.servico-card-inner {
+  padding: 2rem;
+  text-align: center;        /* título e ícone centralizados */
+}
+
+/* manter o parágrafo com leitura confortável (alinhado à esquerda dentro do card) */
+.servico-card-inner .servico-descricao {
+  text-align: left;
+  color: #444;
+  font-size: 0.95rem;
+  margin-top: 0.8rem;
+  line-height: 1.55;
+}
+
+/* títulos centralizados e com o mesmo estilo dos outros títulos de serviço */
+.servico-card-inner .servico-titulo {
+  font-weight: 700;
+  color: var(--azul-escuro);
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+}
+
+/* Esquema de bordas idêntico ao grid original (usa as mesmas regras de .servico-card) */
+.servico-card {
+  /* mantém os estilos já existentes (padding, bordas etc.)
+     só garantindo que a altura das células fique uniforme */
+  min-height: 200px;
+}
+
+/* responsivo: em telas menores empilha e remove bordas desnecessárias */
+@media (max-width: 991px) {
+  .servico-card-inner {
+    padding: 1.25rem;
+  }
+
+  .servico-card {
+    min-height: auto;
+  }
+
+  .servicos-grid-inner {
+    padding: 1.25rem;
+  }
+
+  .servico-icon-custom {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ===== Ajustes visuais para o widget Doctoralia ===== */
+
+/* garante que o container do agendamento mantenha a largura desejada */
+.agende-wrapper {
+  max-width: 380px; /* já existia, reforçamos */
+  margin: 0 auto;
+}
+
+/* deixa o card branco que envolve o widget com padding consistente */
+.doctoralia-card {
+  padding: 14px;                 /* espaço interno ao redor do widget */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  border-radius: 6px;
+  overflow: visible;
+  background: #fff;
+}
+
+/* garante que o conteúdo injetado pelo script ocupe 100% do card */
+.doctoralia-card > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* se o widget criar um iframe ou elemento com margem, zera margens extras */
+.doctoralia-card iframe,
+.doctoralia-card .zl-widget,
+.doctoralia-card .zl-url {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* centraliza o label "Agende agora:" acima do card (se necessário) */
+.agende-label {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* small tweak: evita que o texto do footer do widget 'Doctoralia' fique muito colado */
+.doctoralia-card .zl-branding,
+.doctoralia-card .zl-badge {
+  margin-top: 8px;
+  opacity: 0.95;
+  font-size: 0.85rem;
+}
+
+/* responsivo: mantém boa aparência em telas pequenas */
+@media (max-width: 480px) {
+  .agende-wrapper { max-width: 100%; padding: 0 12px; }
+  .doctoralia-card { padding: 10px; }
+}
+
+/* ===== BOTÃO WAZE — IDENTIDADE VISUAL AZUL ===== */
+.btn-waze {
+  background-color: var(--azul-escuro);
+  border: none;
+  padding: 0.75rem 2.3rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* espaço entre ícone e texto */
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-waze i {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.btn-waze:hover {
+  background-color: var(--azul-medio);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+instagram-wrapper {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* ===== CARDS DAS CLÍNICAS ===== */
+
+.clinic-card {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.clinic-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--azul-escuro);
+  margin-bottom: 0.5rem;
+}
+
+.clinic-address {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+.clinic-phone {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--azul-medio);
+  margin-bottom: 1rem;
+}
+
+/* MAPAS */
+.mapa-wrapper iframe {
+  width: 100%;
+  height: 280px;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  margin-bottom: 1.2rem;
+}
+
+/* BOTÃO WAZE - AZUL COMO WHATSAPP */
+.btn-waze {
+  background-color: var(--azul-escuro);
+  border: none;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff !important;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-waze:hover {
+  background-color: var(--azul-medio);
+  transform: translateY(-1px);
+}
+
+.btn-waze i {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
