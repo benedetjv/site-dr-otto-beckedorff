@@ -910,3 +910,18 @@ section {
   }
 }
 
+/* ===== Correção da imagem da seção SOBRE (mobile) ===== */
+@media (max-width: 767px) {
+  .sobre-foto {
+    margin: 0 auto 1.5rem auto !important; /* centraliza */
+    max-width: 320px !important;           /* reduz um pouco para ficar proporcional */
+    width: 100%;
+  }
+
+  .sobre-foto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+}
