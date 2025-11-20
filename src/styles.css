@@ -2,9 +2,10 @@
 /* Ajuste o nome/arquivo conforme o que estiver na pasta /fonts */
 @font-face {
   font-family: "Safira March";
-  src: url("../fonts/SafiraMarch-Regular.ttf") format("truetype");
+  src: url("/fonts/Safira%20March-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 /* ========= Paleta de cores ========= */
@@ -263,11 +264,12 @@ section {
 .servico-icon-custom {
   width: 48px;
   height: 48px;
-  color: var(--azul-claro);   /* usa a variável da paleta */
+  color: var(--azul-claro);
   margin-bottom: 12px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
 }
 
 /* wrapper interno do card para controlar alinhamento */
@@ -908,6 +910,110 @@ section {
     padding-left: 1.05rem;
     text-align: left; /* melhor leitura em listas longas */
   }
+}
+
+/* ========= Novo layout multi-páginas ========= */
+
+.brand-stack {
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--azul-medio);
+  background: rgba(125, 153, 178, 0.15);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.btn-primary-custom.btn-outline {
+  background-color: transparent;
+  color: var(--azul-escuro);
+  border: 2px solid var(--azul-escuro);
+}
+
+.btn-primary-custom.btn-outline:hover {
+  background-color: var(--azul-escuro);
+  color: #fff;
+}
+
+.section-header .section-title {
+  font-size: 2rem;
+}
+
+.quick-link-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quick-link-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--azul-escuro);
+}
+
+.quick-link-card p {
+  color: #4f5a63;
+  margin-bottom: 1.5rem;
+}
+
+.quick-link-card a {
+  font-weight: 600;
+  color: var(--azul-medio);
+}
+
+.quick-link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0 0;
+}
+
+.about-list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.about-list li::before {
+  content: "•";
+  color: var(--azul-claro);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.hero-photo img {
+  border-radius: 12px;
+}
+
+.clinic-card iframe {
+  min-height: 260px;
 }
 
 /* ===== Correção da imagem da seção SOBRE (mobile) ===== */
