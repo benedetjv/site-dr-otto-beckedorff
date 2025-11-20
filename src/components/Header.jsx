@@ -15,31 +15,28 @@ function Header() {
     <header className="site-header">
       <nav className="navbar navbar-expand-lg navbar-dark" aria-label="Navegação principal">
         <div className="container">
-          <NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
+          <NavLink to="/" className="navbar-brand">
             <img src={logo} alt={brand.logoAlt} className="logo-img" />
-            <div className="brand-stack">
-              <span className="brand-name">{brand.name}</span>
-              <small className="brand-tagline">{brand.tagline}</small>
-            </div>
           </NavLink>
 
           <button
             className="navbar-toggler"
             type="button"
             aria-label="Alternar menu"
-            aria-controls="navbarMain"
+            aria-controls="navbarNav"
             aria-expanded={isOpen}
             onClick={() => setIsOpen((prev) => !prev)}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className={`collapse navbar-collapse justify-content-end ${isOpen ? "show" : ""}`} id="navbarMain">
+          <div className={`collapse navbar-collapse justify-content-end ${isOpen ? "show" : ""}`} id="navbarNav">
             <ul className="navbar-nav">
               {navLinks.map((item) => (
                 <li className="nav-item" key={item.path}>
                   <NavLink
                     to={item.path}
+                    end={item.path === "/"}
                     className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
                   >
                     {item.label}

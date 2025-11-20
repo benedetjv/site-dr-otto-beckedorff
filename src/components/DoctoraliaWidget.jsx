@@ -15,24 +15,21 @@ function DoctoraliaWidget() {
   }, []);
 
   return (
-    <div className="agende-wrapper text-center">
-      <p className="agende-label">Agende agora</p>
-      <div className="doctoralia-card">
-        <a
-          id="zl-url"
-          className="zl-url"
-          href={doctoraliaConfig.href}
-          rel="nofollow noopener"
-          data-zlw-doctor={doctoraliaConfig.doctor}
-          data-zlw-type={doctoraliaConfig.widgetType}
-          data-zlw-opinion={String(doctoraliaConfig.opinions)}
-          data-zlw-hide-branding={String(doctoraliaConfig.hideBranding)}
-          data-zlw-saas-only={String(doctoraliaConfig.saasOnly)}
-          data-zlw-a11y-title="Widget de marcação de consultas médicas"
-        >
-          Otto Beckedorff - Doctoralia.com.br
-        </a>
-      </div>
+    <div className="doctoralia-card">
+      <a
+        id="zl-url"
+        className="zl-url"
+        href={doctoraliaConfig.href}
+        rel="nofollow noopener"
+        data-zlw-doctor={doctoraliaConfig.doctor}
+        data-zlw-type={doctoraliaConfig.widgetType}
+        data-zlw-opinion={String(doctoraliaConfig.opinions)}
+        data-zlw-hide-branding={String(doctoraliaConfig.hideBranding)}
+        data-zlw-saas-only={String(doctoraliaConfig.saasOnly)}
+        data-zlw-a11y-title="Widget de marcação de consultas médicas"
+      >
+        Otto Beckedorff - Doctoralia.com.br
+      </a>
     </div>
   );
 }
